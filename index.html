@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cambiar Color</title>
+  <style>
+    #cuadrado{
+      width: 100px;
+      height: 100px;
+      background-color: gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    #boton{
+        width: 100px;
+    }
+
+    #cuadrado2{
+    width: 233px;
+    height: 100px;
+    background-color:rgba(160, 83, 94, 0.616);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    }
+
+    #formEjTres{
+        width:300px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    label{
+        font-family: sans-serif;
+        font-size: 12px;
+        color: rgba(128, 128, 128, 0.582)
+    }
+
+    fieldset{
+        border-color: transparent;
+        margin-bottom: 1rem;
+    }
+
+    legend{
+        font-weight: 800;
+        font-family: sans-serif;
+        font-size: 12px;
+    }
+
+    #form{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #boton-calcular{
+        height: 35px;
+        width: 70px;
+        background-color: rgb(40, 172, 172);
+        border-color: transparent;
+        margin-left: 1rem;
+    }
+
+    
+  </style>
+
+</head>
+<body>
+
+    <h2>EJERCICIO 1:</h2>
+
+  <div id="cuadrado">
+  <span id="nombreDelColor">GRIS</span>
+    </div>
+  <br>
+  <button id="boton" onclick="changeColor()"> Cambiar </button>
+
+    <h2>EJERCICIO 2:</h2>
+
+    <div id="cuadrado2">
+        <span id="texto">GRIS</span>
+    </div>
+    <br>
+    <input type="text" id="textoIngresado" oninput="mostrarTexto()">
+    <button onclick="borrarTexto()"> Borrar </button>
+   
+    <h2>EJERCICIO 3:</h2>
+
+    <div id="form">
+        <div id="formEjTres">
+
+            <fieldset>
+            <legend>ESTATURA</legend>
+            <label for="altura">En centímetros:</label>
+            <input type="text" id="altura">
+            </fieldset>
+
+            <fieldset>
+                <legend>PESO</legend>
+            <label for="peso">En kilogramos:</label>
+            <input type="text" id="peso">
+            </fieldset>
+
+            <button onclick="calcular()" id="boton-calcular">Calcular</button>
+        </div>
+
+        <fieldset>
+        <legend>RESULTADO</legend>
+        <label for="resultado">IMC:</label>
+        <input type="text" id="resultado" readonly>   
+        </fieldset>
+    </div>
+
+    <h2>EJERCICIO 4:</h2>
+
+    <label for="usd">USD:</label>
+    <input type="number" id="usd" min="0" step="0.01" value="1" oninput="convertir()">
+    
+    <label for="peso">Peso:</label>
+    <input type="number" id="pesoArg" min="0" step="0.01" value="140" oninput="convertir()">
+    
+    <label for="valorConvertido">Valor Convertido:</label>
+    <input type="text" id="valorConvertido" readonly>
+
+<script src="index.js"></script>
+</body>
+</html>
